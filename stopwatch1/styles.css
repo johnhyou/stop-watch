@@ -14,11 +14,15 @@
 }
 
 form {
-  max-width: 100px;
+  max-width: 135px;
   margin: 0 auto;
 }
 
 #seconds {
   font-size: 250px;
   color: brown;
+}
+
+#resetbutton {
+  float: right;
 }

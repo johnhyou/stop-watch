@@ -6,11 +6,14 @@ var stopwatch = {
 }
 var $startbutton = document.querySelector('#startbutton')
 var $stopbutton = document.querySelector('#stopbutton')
+var $resetbutton = document.querySelector('#resetbutton')
 
 function startTimer() {
-  stopwatch.id = setInterval(function() {
-    var start = stopwatch.seconds++
-  }, 1000)
+  if (stopwatch.seconds >= 0) {
+    stopwatch.id = setInterval(function() {
+    stopwatch.seconds++
+    }, 1000)
+  }
 }
 
 function secondsRender() {
@@ -22,6 +25,10 @@ function secondsRender() {
 function stop() {
   clearInterval(stopwatch.id)
 }
+function reset() {
+  stopwatch.seconds = 0
+}
+$resetbutton.addEventListener('click', reset)
 $startbutton.addEventListener('click', startTimer)
 $stopbutton.addEventListener('click', stop)
 secondsRender()
