@@ -15,7 +15,6 @@ function startTimer() {
     }, 1000)
   }
 }
-
 function secondsRender() {
   setInterval(function() {
     var $seconds = document.querySelector('#seconds')
