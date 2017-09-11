@@ -5,13 +5,19 @@ var stopwatch = {
   id: null
 }
 
- function startTimer() {
-   stopwatch.id = setInterval(function() {
+var $startbutton = document.querySelector('#startbutton')
+
+function secondsRender() {
+setInterval(function(){
+  var $seconds = document.querySelector('#seconds')
+  $seconds.textContent = stopwatch.seconds
+}, 16)
+}
+
+function startTimer() {
+  stopwatch.id = setInterval(function() {
     var start = stopwatch.seconds++
   }, 1000)
- }
-/*
-var $startbutt = document.querySelector('#startbutt')
-var $secondsTxt = document.querySelector('#seconds')
-$startbutt.addEventListener('click', startTimer)
-$secondsTxt.textContent = stopwatch.seconds */
+}
+$startbutton.addEventListener('click', startTimer)
+secondsRender()
