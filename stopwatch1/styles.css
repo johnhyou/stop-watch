@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+}
+
+.border {
+  height: 1000px;
+  width: 100%;
+}
+
+.wrapper {
+  width: 1060px;
+  height: 2000px;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 135px;
+  margin: 0 auto;
+}
+
+#seconds {
+  font-size: 250px;
+  color: brown;
+}
+
+#resetbutton {
+  float: right;
+}
